@@ -1,7 +1,8 @@
 package ru.hse.crypto.processor
 
 import cats.effect.{IO, Ref}
-import ru.hse.crypto.core.Domain.{CryptoPrice, PriceAlert}
+import ru.hse.crypto.core.domain.{CryptoPrice, PriceAlert}
+
 import java.time.Instant
 
 trait Analyzer {

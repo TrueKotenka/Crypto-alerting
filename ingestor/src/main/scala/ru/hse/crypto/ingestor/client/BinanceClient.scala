@@ -3,7 +3,7 @@ package ru.hse.crypto.ingestor.client
 import cats.effect.Async
 import cats.syntax.all._
 import io.circe.generic.auto._
-import ru.hse.crypto.core.Domain.CryptoPrice
+import ru.hse.crypto.core.domain.CryptoPrice
 import ru.hse.crypto.ingestor.dto.BinanceTickerResponse
 import sttp.client4._
 import sttp.client4.circe._

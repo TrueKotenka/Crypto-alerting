@@ -2,7 +2,7 @@ package ru.hse.crypto.ingestor
 
 import pureconfig.ConfigReader
 import pureconfig.generic.semiauto.deriveReader
-import ru.hse.crypto.core.KafkaConfig
+import ru.hse.crypto.core.config.KafkaConfig
 
 import scala.concurrent.duration.FiniteDuration
 

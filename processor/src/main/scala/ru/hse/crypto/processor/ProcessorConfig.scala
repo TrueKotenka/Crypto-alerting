@@ -2,7 +2,7 @@ package ru.hse.crypto.processor
 
 import pureconfig.ConfigReader
 import pureconfig.generic.semiauto.deriveReader
-import ru.hse.crypto.core.KafkaConfig
+import ru.hse.crypto.core.config.KafkaConfig
 
 final case class ProcessorConfig(
                                   kafkaConsumer: KafkaConfig,

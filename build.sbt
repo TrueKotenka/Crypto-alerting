@@ -42,6 +42,8 @@ lazy val core = (project in file("core"))
     commonSettings,
     name := "crypto-core",
     libraryDependencies ++= Seq(
+      // Kafka Client
+      "com.github.fd4s" %% "fs2-kafka" % fs2KafkaVersion,
       // JSON (Circe - стандарт де-факто для fs2-kafka и tapir)
       "io.circe" %% "circe-core"    % circeVersion,
       "io.circe" %% "circe-generic" % circeVersion,

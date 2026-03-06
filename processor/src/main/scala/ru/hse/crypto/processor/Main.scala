@@ -7,7 +7,7 @@ import io.circe.parser.decode
 import io.circe.syntax._
 import pureconfig.ConfigSource
 import ru.hse.crypto.core.Codecs._
-import ru.hse.crypto.core.Domain.{CryptoPrice, PriceAlert}
+import ru.hse.crypto.core.domain.{CryptoPrice, PriceAlert}
 
 import java.util.concurrent.TimeUnit
 import scala.concurrent.duration.FiniteDuration

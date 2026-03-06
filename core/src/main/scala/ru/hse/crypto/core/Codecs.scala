@@ -2,7 +2,7 @@ package ru.hse.crypto.core
 
 import io.circe.Codec
 import io.circe.generic.semiauto.deriveCodec
-import ru.hse.crypto.core.Domain.{CryptoPrice, PriceAlert}
+import ru.hse.crypto.core.domain.{CryptoPrice, PriceAlert}
 
 object Codecs {
   implicit val cryptoPriceCodec: Codec[CryptoPrice] = deriveCodec[CryptoPrice]

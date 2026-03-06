@@ -5,8 +5,7 @@ import fs2.Stream
 import fs2.kafka._
 import io.circe.syntax._
 import pureconfig.ConfigSource
-import ru.hse.crypto.core.AppTopics
-import ru.hse.crypto.core.Domain.CryptoPrice
+import ru.hse.crypto.core.domain.CryptoPrice
 import ru.hse.crypto.ingestor.client.{BinanceClient, CryptoClient}
 import sttp.client4.httpclient.cats.HttpClientCatsBackend
 
@@ -63,7 +62,7 @@ object Main extends IOApp {
       // 4. Оборачиваем каждый CryptoPrice в формат ProducerRecord для Kafka
       // Record принимает: (Топик, Ключ, Значение)
       .map { price =>
-        val record = ProducerRecord(AppTopics.RawPrices, price.symbol, price)
+        val record = ProducerRecord(config.kafka.topic, price.symbol, price)
         ProducerRecords.one(record)
       }
       // 5. Логируем для наглядности
